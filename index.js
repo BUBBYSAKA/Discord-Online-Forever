@@ -9,12 +9,11 @@ bot.on("error", (err) => {
 });
 bot.on("ready", () => {
   bot.editStatus("online", {
-    name: "discord.gg/permfruits"
+    name: "discord.gg/thugshaker"
   }).catch(console.error);
 });
 bot.on('messageCreate', message => {
-	const channel = bot.channels.cache.get('1144933431910871052'); // Replace with the desired channel ID
-	console.log(message.content);
+	
 
   if (message.content.startsWith("ZADE")) {
     return message.reply("Suck My dick ZADE");
@@ -119,20 +118,6 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
     }
   }
 });
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
 
-readline.on('line', userInput => {
-  // Send the user's input as a message to the specified channel
-  const channel = client.channels.cache.get("1223919638044344430");
-
-  if (channel) {
-    channel.send(userInput);
-  } else {
-    console.error('Channel not found.');
-  }
-  });
 
 bot.connect(); // Get the bot to connect to Discord
