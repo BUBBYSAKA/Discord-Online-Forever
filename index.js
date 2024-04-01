@@ -16,9 +16,7 @@ bot.on("error", (err) => {
   console.error(err); // or your preferred logger
 });
 bot.once("ready", () => {
-  bot.editStatus("online", {
-    name: "discord.gg/thugshaker"
-  }).catch(console.error);
+  console.log("Ready");
 });
 bot.on('messageCreate', message => {
 	
