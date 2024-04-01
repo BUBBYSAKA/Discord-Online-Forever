@@ -126,6 +126,6 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
     }
   }
 });
-bot login(process.env.token);
+bot.login(process.env.token);
 
 //bot.connect(); // Get the bot to connect to Discord
