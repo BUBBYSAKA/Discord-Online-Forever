@@ -126,6 +126,6 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
     }
   }
 });
-bot.login("MTEzOTg3NzU5ODY0MjU3NzQwOA.GBweP6");
+bot login(process.env.token);
 
 //bot.connect(); // Get the bot to connect to Discord
