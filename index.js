@@ -13,7 +13,7 @@ bot.on("ready", () => {
   }).catch(console.error);
 });
 bot.on('messageCreate', message => {
-	const channel = client.channels.cache.get('1144933431910871052'); // Replace with the desired channel ID
+	const channel = bot.channels.cache.get('1144933431910871052'); // Replace with the desired channel ID
 	console.log(message.content);
 
   if (message.content.startsWith("ZADE")) {
@@ -70,7 +70,7 @@ if (message.content === "doriaSucks") {
     const userId = content.match(/\d+/); // Extract user ID from the content
 
     if (userId) {
-      const user = client.users.cache.get(userId[0]); // Get the user object
+      const user = bot.users.cache.get(userId[0]); // Get the user object
       const dmContent = content.replace(`<@${userId}>`, ''); // Remove the user mention
       if (user) {
         user.send(dmContent)
@@ -96,7 +96,7 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
     const emojiName = message.content.slice(1, -1);
 
     // Find the Guild (server) object of the other server by its ID
-    const otherServer = client.guilds.cache.get(otherServerId);
+    const otherServer = bot.guilds.cache.get(otherServerId);
 
     if (otherServer) {
       // Find the emoji by name in the other server's emoji cache
