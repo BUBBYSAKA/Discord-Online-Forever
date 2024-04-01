@@ -2,13 +2,20 @@ const Eris = require("eris");
 const Discord = require("discord.js");
 const keep_alive = require('./keep_alive.js')
 
+const bot = new Discord.Client({
+    intents: [
+        Discord.GatewayIntentBits.Guilds 
+        , Discord.GatewayIntentBits.GuildMessages 
+        , Discord.GatewayIntentBits.MessageContent
+        ] ,
+});
 // Replace TOKEN with your bot account's token
 const bot = new Eris(process.env.token);
 
 bot.on("error", (err) => {
   console.error(err); // or your preferred logger
 });
-bot.on("ready", () => {
+bot.once("ready", () => {
   bot.editStatus("online", {
     name: "discord.gg/thugshaker"
   }).catch(console.error);
@@ -119,6 +126,6 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
     }
   }
 });
+bot.login("MTEzOTg3NzU5ODY0MjU3NzQwOA.GBweP6");
 
-
-bot.connect(); // Get the bot to connect to Discord
+//bot.connect(); // Get the bot to connect to Discord
