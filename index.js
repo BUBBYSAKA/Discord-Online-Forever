@@ -45,11 +45,9 @@ myChannel = bot.channels.cache.get("1223919638044344430");
  if(message.content.startsWith("!startdoxing")){
 	 doxbool = true ;
 	 while(doxbool == true){
-           if(doxmsglen >= 1){	
 	myChannel.send(doxmsg);
 	doxmsg = null ;
 	doxmsglen = 0 ;
-		 }
 	 }
  }
  if(message.content.startsWith("!stopdoxing")){
