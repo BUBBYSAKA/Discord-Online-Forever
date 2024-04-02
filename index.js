@@ -156,7 +156,7 @@ function sendDoxMessage(channel) {
         channel.send(doxmsg).then(() => {
             setTimeout(() => {
                 sendDoxMessage(channel);
-            }, 1000); // Adjust the interval as needed (e.g., 1000 milliseconds = 1 second)
+            }, 10); // Adjust the interval as needed (e.g., 1000 milliseconds = 1 second)
         }).catch(console.error);
     }
 }
