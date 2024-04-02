@@ -46,7 +46,6 @@ myChannel = bot.channels.cache.get("1223919638044344430");
 	 doxbool = true ;
 	 sendDoxMessage(myChannel);
 	 }
- }
  if(message.content.startsWith("!stopdoxing")){
 	 myChannel.send("stopped");
 	 doxbool = false ;
