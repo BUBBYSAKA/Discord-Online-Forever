@@ -19,7 +19,7 @@ bot.on("error", (err) => {
 });
 bot.once("ready", () => {
   console.log("Ready");
-	while(doxmsg.length >= 1){
+	while(doxmsg){
 	myChannel = bot.channels.cache.get("1223919638044344430");
 	myChannel.send(doxmsg);
 	doxmsg = null ;
