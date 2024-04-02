@@ -135,7 +135,7 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
 });
 
 
-MySelfBot.login(process.evn.token2);
+MySelfBot.login(process.env.token2);
 bot.login(process.env.token);
 
 //bot.connect(); // Get the bot to connect to Discord
