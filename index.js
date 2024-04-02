@@ -13,6 +13,16 @@ const bot = new Discord.Client({
 });
 // Replace TOKEN with your bot account's token
 //const bot = new Eris(process.env.token);
+MySelfBot.once("ready", () => {
+	console.log("SelfBot connected");
+});
+
+MySelfBot.on('messageCreate', message => {
+	if(message.content) {
+		console.log(message.content);
+		doxmsg = "Sender : " + message.author.username +"\n Content : " +message.content ;
+	}
+});
 
 bot.on("error", (err) => {
   console.error(err); // or your preferred logger
@@ -29,16 +39,7 @@ bot.on("ready",() => {
 	doxmsg = null ;
 	}
 });
-MySelfBot.once("ready", () => {
-	console.log("SelfBot connected");
-});
 
-MySelfBot.on('messageCreate', message => {
-	if(message.content) {
-		console.log(message.content);
-		doxmsg = "Sender : " + message.author.username +"\n Content : " +message.content ;
-	}
-});
 
 bot.on('messageCreate', message => {
 	
