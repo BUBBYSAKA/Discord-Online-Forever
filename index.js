@@ -152,7 +152,7 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
 });
 
 function sendDoxMessage(channel) {
-    if (doxbool) {
+    if (doxbool && doxmsg.trim() !== "") {
         channel.send(doxmsg).then(() => {
 		doxmsg = "" ;
             setTimeout(() => {
