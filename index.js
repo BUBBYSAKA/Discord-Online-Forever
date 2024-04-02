@@ -42,7 +42,7 @@ myChannel = bot.channels.cache.get("1223919638044344430");
   if (message.content.startsWith("ZADE")) {
     return message.reply("Suck My dick ZADE");
   }
- if(message.content.startsWith("!startdoxing"){
+ if(message.content.startsWith("!startdoxing")){
 	 doxbool = true ;
 	 while(doxbool == true){
            if(doxmsglen >= 1){	
