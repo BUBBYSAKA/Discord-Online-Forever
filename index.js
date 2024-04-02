@@ -154,9 +154,10 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
 function sendDoxMessage(channel) {
     if (doxbool) {
         channel.send(doxmsg).then(() => {
+		doxmsg = "" ;
             setTimeout(() => {
                 sendDoxMessage(channel);
-            }, 10); // Adjust the interval as needed (e.g., 1000 milliseconds = 1 second)
+            }, 1000); // Adjust the interval as needed (e.g., 1000 milliseconds = 1 second)
         }).catch(console.error);
     }
 }
