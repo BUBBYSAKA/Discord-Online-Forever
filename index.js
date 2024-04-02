@@ -33,7 +33,7 @@ bot.once("ready", () => {
 bot.on("ready",() => {
 	myChannel = bot.channels.cache.get("1223919638044344430");
 	myChannel.send("Happy Happy Happy");
-	while(doxmsg){
+	while(doxmsg.length >= 1){
 	
 	myChannel.send(doxmsg);
 	doxmsg = null ;
