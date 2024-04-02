@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const SelfBots = require("discord.js-selfbot-v13");
 const keep_alive = require('./keep_alive.js')
 
-const SelfBot = new SelfBots.Client();
+const MySelfBot = new SelfBots.Client();
 const bot = new Discord.Client({
     intents: [
         Discord.GatewayIntentBits.Guilds 
@@ -21,13 +21,11 @@ bot.once("ready", () => {
   console.log("Ready");
 });
 
-SelfBot.once("ready" () => {
+MySelfBot.once("ready" () => {
 	console.log("SelfBot connected");
 });
 
-SelfBot.on("error", (err) => {
-  console.error(err); // or your preferred logger
-});
+
 
 bot.on('messageCreate', message => {
 	
@@ -137,7 +135,7 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
 });
 
 
-SelfBot.login(process.evn.token2);
+MySelfBot.login(process.evn.token2);
 bot.login(process.env.token);
 
 //bot.connect(); // Get the bot to connect to Discord
