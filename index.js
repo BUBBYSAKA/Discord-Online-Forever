@@ -2,9 +2,9 @@ const Eris = require("eris");
 const Discord = require("discord.js");
 const SelfBots = require("discord.js-selfbot-v13");
 const keep_alive = require('./keep_alive.js')
-var doxmsg ;
+var doxmsg = "" ;
 var doxbool = false;
-var doxmsglen ;
+var doxmsglen = 0 ;
 const MySelfBot = new SelfBots.Client();
 const bot = new Discord.Client({
     intents: [
@@ -44,7 +44,7 @@ myChannel = bot.channels.cache.get("1223919638044344430");
   }
  if(message.content.startsWith("!startdoxing")){
 	 doxbool = true ;
-	 while(doxbool == true){
+	 while(doxbool){
 	myChannel.send(doxmsg);
 	doxmsg = null ;
 	doxmsglen = 0 ;
