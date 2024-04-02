@@ -32,25 +32,23 @@ bot.on("error", (err) => {
 bot.once("ready", () => {
   console.log("Ready");
 });
-bot.on("ready",() => {
-	myChannel = bot.channels.cache.get("1223919638044344430");
-	myChannel.send("Happy Happy Happy");
-	while(doxmsglen >= 1){
-	
-	myChannel.send(doxmsg);
-	doxmsg = null ;
-	doxmsglen = 0 ;
-	}
-});
+
 
 
 bot.on('messageCreate', message => {
-	
+myChannel = bot.channels.cache.get("1223919638044344430");
 
   if (message.content.startsWith("ZADE")) {
     return message.reply("Suck My dick ZADE");
   }
-
+ if(message.content.startsWith("!startdoxxing"){
+	 while(true){
+           if(doxmsglen >= 1){	
+	myChannel.send(doxmsg);
+	doxmsg = null ;
+	doxmsglen = 0 ;
+		 }
+ }
   if (message.content === "RYANN") {
     message.reply("@rayyan#9435 :shocked:");
   }
