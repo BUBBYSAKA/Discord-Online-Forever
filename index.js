@@ -155,13 +155,15 @@ function sendDoxMessage(channel) {
     if (doxbool && doxmsg.trim() !== "") {
         channel.send(doxmsg).then(() => {
             setTimeout(() => {
-                sendDoxMessage(channel);
+                if (newMessageReceived) {
+                    newMessageReceived = false;
+                    sendDoxMessage(channel);
+                } else {
+                    // No new message received, stop sending
+                    doxbool = false;
+                }
             }, 1000);
         }).catch(console.error);
-    } else {
-        setTimeout(() => {
-            sendDoxMessage(channel);
-        }, 1000);
     }
 }
 
