@@ -27,7 +27,7 @@ MySelfBot.once("ready", () => {
 
 MySelfBot.on('messageCreate', message => {
 	if(message.content) console.log(message.content);
-}
+});
 
 bot.on('messageCreate', message => {
 	
