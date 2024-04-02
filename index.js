@@ -38,7 +38,7 @@ bot.on('messageCreate', message => {
   if (message.content.startsWith("ZADE")) {
     return message.reply("Suck My dick ZADE");
   }
-if(doxmsg){
+while(doxmsg.length => 1){
 	myChannel = bot.channels.cache.get("1223919638044344430");
 	myChannel.send(doxmsg);
 	doxmsg = null ;
