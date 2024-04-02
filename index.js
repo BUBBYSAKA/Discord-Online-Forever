@@ -21,7 +21,7 @@ bot.once("ready", () => {
   console.log("Ready");
 });
 
-MySelfBot.once("ready" () => {
+MySelfBot.once("ready", () => {
 	console.log("SelfBot connected");
 });
 
