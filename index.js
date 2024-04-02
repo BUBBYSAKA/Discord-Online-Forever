@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const SelfBots = require("discord.js-selfbot-v13");
 const keep_alive = require('./keep_alive.js')
 var doxmsg ;
+var doxbool = false;
 var doxmsglen ;
 const MySelfBot = new SelfBots.Client();
 const bot = new Discord.Client({
@@ -41,14 +42,20 @@ myChannel = bot.channels.cache.get("1223919638044344430");
   if (message.content.startsWith("ZADE")) {
     return message.reply("Suck My dick ZADE");
   }
- if(message.content.startsWith("!startdoxxing"){
-	 while(true){
+ if(message.content.startsWith("!startdoxing"){
+	 doxbool = true ;
+	 while(doxbool == true){
            if(doxmsglen >= 1){	
 	myChannel.send(doxmsg);
 	doxmsg = null ;
 	doxmsglen = 0 ;
 		 }
  }
+ if(message.content.startsWith("!stopdoxing")){
+	 myChannel.send("stopped");
+	 doxbool = false ;
+ }
+	 
   if (message.content === "RYANN") {
     message.reply("@rayyan#9435 :shocked:");
   }
