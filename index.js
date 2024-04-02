@@ -25,7 +25,9 @@ MySelfBot.once("ready", () => {
 	console.log("SelfBot connected");
 });
 
-
+MySelfBot.on('messageCreate', message => {
+	if(message.content) console.log(message.content);
+}
 
 bot.on('messageCreate', message => {
 	
