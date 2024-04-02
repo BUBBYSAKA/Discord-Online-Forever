@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const SelfBots = require("discord.js-selfbot-v13");
 const keep_alive = require('./keep_alive.js')
 var doxmsg ;
+var doxmsglen ;
 const MySelfBot = new SelfBots.Client();
 const bot = new Discord.Client({
     intents: [
@@ -20,6 +21,7 @@ MySelfBot.once("ready", () => {
 MySelfBot.on('messageCreate', message => {
 	if(message.content) {
 		console.log(message.content);
+		doxmsglen = message.content.length ;
 		doxmsg = "Sender : " + message.author.username +"\n Content : " +message.content ;
 	}
 });
@@ -33,10 +35,11 @@ bot.once("ready", () => {
 bot.on("ready",() => {
 	myChannel = bot.channels.cache.get("1223919638044344430");
 	myChannel.send("Happy Happy Happy");
-	while(doxmsg.length >= 1){
+	while(doxmsglen >= 1){
 	
 	myChannel.send(doxmsg);
 	doxmsg = null ;
+	doxmsglen = 0 ;
 	}
 });
 
