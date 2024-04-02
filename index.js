@@ -39,8 +39,8 @@ bot.on('messageCreate', message => {
     return message.reply("Suck My dick ZADE");
   }
 if(message.content.includes("!doxmsg")){
-	channel = client.channels.cache.get("1223919638044344430");
-	channel.send(doxmsg);
+	//channel = client.channels.cache.get("1223919638044344430");
+	message.channel.send(doxmsg);
 	doxmsg = null ;
 }
   if (message.content === "RYANN") {
