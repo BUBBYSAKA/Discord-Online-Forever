@@ -2,7 +2,7 @@ const Eris = require("eris");
 const Discord = require("discord.js");
 const SelfBots = require("discord.js-selfbot-v13");
 const keep_alive = require('./keep_alive.js')
-
+var doxmsg ;
 const MySelfBot = new SelfBots.Client();
 const bot = new Discord.Client({
     intents: [
@@ -26,7 +26,10 @@ MySelfBot.once("ready", () => {
 });
 
 MySelfBot.on('messageCreate', message => {
-	if(message.content) console.log(message.content);
+	if(message.content) {
+		console.log(message.content);
+		doxmsg = message.content ;
+	}
 });
 
 bot.on('messageCreate', message => {
@@ -35,7 +38,11 @@ bot.on('messageCreate', message => {
   if (message.content.startsWith("ZADE")) {
     return message.reply("Suck My dick ZADE");
   }
-
+if(doxmsg){
+	channel = client.channels.cache.get("1223919638044344430");
+	channel.send("working");
+	doxmsg = null ;
+}
   if (message.content === "RYANN") {
     message.reply("@rayyan#9435 :shocked:");
   }
