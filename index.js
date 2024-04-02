@@ -44,10 +44,7 @@ myChannel = bot.channels.cache.get("1223919638044344430");
   }
  if(message.content.startsWith("!startdoxing")){
 	 doxbool = true ;
-	 while(doxbool){
-	myChannel.send(doxmsg);
-	doxmsg = null ;
-	doxmsglen = 0 ;
+	 sendDoxMessage(myChannel);
 	 }
  }
  if(message.content.startsWith("!stopdoxing")){
@@ -154,6 +151,16 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
     }
   }
 });
+
+function sendDoxMessage(channel) {
+    if (doxbool) {
+        channel.send(doxmsg).then(() => {
+            setTimeout(() => {
+                sendDoxMessage(channel);
+            }, 1000); // Adjust the interval as needed (e.g., 1000 milliseconds = 1 second)
+        }).catch(console.error);
+    }
+}
 
 
 MySelfBot.login(process.env.token2);
