@@ -1,4 +1,5 @@
 const Eris = require("eris");
+const sqlite3 = require('sqlite3').verbose();
 const Discord = require("discord.js");
 const SelfBots = require("discord.js-selfbot-v13");
 const keep_alive = require('./keep_alive.js')
@@ -6,6 +7,7 @@ var doxmsg = "" ;
 var doxbool = false;
 var doxmsglen = 0 ;
 const MySelfBot = new SelfBots.Client();
+const db = new sqlite3.Database(':memory:');
 const bot = new Discord.Client({
     intents: [
         Discord.GatewayIntentBits.Guilds 
@@ -13,7 +15,7 @@ const bot = new Discord.Client({
         , Discord.GatewayIntentBits.MessageContent
         ] ,
 });
-myChannel = bot.channels.cache.get("1223919638044344430");
+
 // Replace TOKEN with your bot account's token
 //const bot = new Eris(process.env.token);
 MySelfBot.once("ready", () => {
@@ -25,7 +27,7 @@ MySelfBot.on('messageCreate', message => {
 		console.log(message.content);
 		doxmsglen = message.content.length ;
 		doxmsg = "Sender : " + message.author.username +"\n Content : " +message.content ;
-		bot.myChannel.send(doxmsg);
+		
 	}
 });
 
@@ -40,7 +42,20 @@ bot.once("ready", () => {
 
 bot.on('messageCreate', message => {
 myChannel = bot.channels.cache.get("1223919638044344430");
-
+if (message.content.startsWith('!query')) {
+        // Extract the SQL query from the message
+        const query = message.content.slice('!query'.length).trim();
+        
+        // Execute the SQL query
+        db.all(query, [], (err, rows) => {
+            if (err) {
+                console.error(err.message);
+                message.reply('Error executing query!');
+            } else {
+                message.reply(`Query result:\n${JSON.stringify(rows, null, 2)}`);
+            }
+        });
+}
   if (message.content.startsWith("ZADE")) {
     return message.reply("Suck My dick ZADE");
   }
