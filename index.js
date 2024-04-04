@@ -5,8 +5,6 @@ const keep_alive = require('./keep_alive.js')
 var doxmsg = "" ;
 var doxbool = false;
 var doxmsglen = 0 ;
-myChannel = bot.channels.cache.get("1223919638044344430");
-
 const MySelfBot = new SelfBots.Client();
 const bot = new Discord.Client({
     intents: [
@@ -15,6 +13,7 @@ const bot = new Discord.Client({
         , Discord.GatewayIntentBits.MessageContent
         ] ,
 });
+myChannel = bot.channels.cache.get("1223919638044344430");
 // Replace TOKEN with your bot account's token
 //const bot = new Eris(process.env.token);
 MySelfBot.once("ready", () => {
