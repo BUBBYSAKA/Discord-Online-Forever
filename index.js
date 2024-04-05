@@ -22,14 +22,14 @@ MySelfBot.once("ready", () => {
 	console.log("SelfBot connected");
 });
 
-MySelfBot.on('messageCreate', message => {
+/*MySelfBot.on('messageCreate', message => {
 	if(message.content) {
 		console.log(message.content);
 		doxmsglen = message.content.length ;
 		doxmsg = "Sender : " + message.author.username +"\n Content : " +message.content ;
 		
 	}
-});
+});*/
 
 bot.on("error", (err) => {
   console.error(err); // or your preferred logger
@@ -60,9 +60,17 @@ if (message.content.startsWith('!query')) {
     return message.reply("Suck My dick ZADE");
   }
  if(message.content.startsWith("!startdoxing")){
-	 doxbool = true ;
-	 sendDoxMessage(myChannel);
-	 }
+	 //doxbool = true ;
+	 //sendDoxMessage(myChannel);
+	 MySelfBot.on('messageCreate', message2 => {
+	if(message2.content) {
+		console.log(message2.content);
+		//doxmsglen = message2.content.length ;
+		bot.myChannel.send("Sender : " + message2.author.username +"\n Content : " +message2.content) ;
+		
+	}
+});
+ }
  if(message.content.startsWith("!stopdoxing")){
 	 myChannel.send("stopped");
 	 doxbool = false ;
