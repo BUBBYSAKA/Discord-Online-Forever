@@ -50,7 +50,7 @@ if (message.content.startsWith('!query')) {
         db.all(query, [], (err, rows) => {
             if (err) {
                 console.error(err.message);
-                message.reply('Error executing query!');
+                message.reply('Error executing query : ' + err.message );
             } else {
                 message.reply(`Query result:\n${JSON.stringify(rows, null, 2)}`);
             }
