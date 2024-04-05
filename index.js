@@ -7,7 +7,7 @@ var doxmsg = "" ;
 var doxbool = false;
 var doxmsglen = 0 ;
 const MySelfBot = new SelfBots.Client();
-const db = new sqlite3.Database(':memory:');
+const db = new sqlite3.Database('mydatabase.db');
 const bot = new Discord.Client({
     intents: [
         Discord.GatewayIntentBits.Guilds 
