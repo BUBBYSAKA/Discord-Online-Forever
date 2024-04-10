@@ -47,12 +47,12 @@ bot.once("ready", () => {
 
 bot.on('messageCreate', message => {
 myChannel = bot.channels.cache.get("1223919638044344430");
-	grantMommyPics = { 
+	grantMommyPics = [
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc2H-gvD1uW7Y-nN7o9zcsd467yBZw5J1X_b99TBrhDTzENWRXu-OA9Zlw&s=10" ,
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZFNv6Wbdya1oB3P6NxGLo-FGfnv-N86MIGE6-izCdDLMTXyvzGRtg_o&s=10",
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtRR8XysNzc0maZBbrNrrLuC4btCkbv8l1VKEt9e6UOLDT7b7SrvrCXBo&s=10",
 "https://i.ytimg.com/vi/OXSkFW8wLiw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBrFAaAPATwu8lE7zTjQ64vkdGrWA"
-} ;
+] ;
 if(message.content == "GrantMommy") {
 for(let i = 0 ; i < grantMommyPics.length ; i++) {
 message.reply("Pictures of Grant's Sexy Mother " + grantMommyPics[i] + "\n Uhh Sexxxxyyy ");
