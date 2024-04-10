@@ -17,7 +17,7 @@ const bot = new Discord.Client({
 });
 
 // Replace TOKEN with your bot account's token
-//const bot = new Eris(process.env.token);
+const account = new Eris(process.env.token3);
 MySelfBot.once("ready", () => {
 	console.log("SelfBot connected");
 });
@@ -30,6 +30,11 @@ MySelfBot.once("ready", () => {
 		
 	}
 });*/
+account.on("ready", () => {
+  account.editStatus("online", {
+    name: "Rally Fury"
+  }).catch(console.error);
+});
 
 bot.on("error", (err) => {
   console.error(err); // or your preferred logger
@@ -196,4 +201,4 @@ function sendDoxMessage(channel) {
 MySelfBot.login(process.env.token2);
 bot.login(process.env.token);
 
-//bot.connect(); // Get the bot to connect to Discord
+account.connect(); // Get the bot to connect to Discord
