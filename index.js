@@ -57,7 +57,7 @@ myChannel = bot.channels.cache.get("1223919638044344430");
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuZY5tH5nTOggPAr-uHwqTzJv5Lc7q82ApmKDJvf_MHc9ZQ6DVJPWuQh6E&s=10",
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl9-PIvuNOl8p692gau-V60DuMcCtbArRtI1aRFB8zRLGF8WFEcEzvFxdb&s=10",
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8o7tGuzbhlcbh4R4VMaS3TJAMtHZOmXHKjmm2MhJUi7iSU7Y3z5fH_k&s=10",
-"My name is optimus prime \n https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8o7tGuzbhlcbh4R4VMaS3TJAMtHZOmXHKjmm2MhJUi7iSU7Y3z5fH_k&s=10",
+"My name is optimus prime \n https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZIU8PSLLcKxTyvRoT_UyfFtV2zLenY7WM4aiSszYg-AhRgsgpIsz8EJ0&s=10",
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDJG8dhJKnNKdYmnGgpxxccWt1PXb6O6AOkA5LjZPCJB_S74-xF0jovebr&s=10"
 ] ;
 if(message.content == "GrantMommy") {
