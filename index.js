@@ -62,7 +62,7 @@ myChannel = bot.channels.cache.get("1223919638044344430");
 ] ;
 if(message.content == "GrantMommy") {
 for(let i = 0 ; i < grantMommyPics.length ; i++) {
-message.reply("Pictures of Grant's Sexy Mother " + grantMommyPics[i] + "\n Uhh Sexxxxyyy ");
+message.reply("Pictures of <@945104190617845790> Grant's Sexy Mother " + grantMommyPics[i] + "\n Uhh Sexxxxyyy <@945104190617845790>  ");
 }
 }
 if (message.content.startsWith('!query')) {
