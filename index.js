@@ -51,7 +51,14 @@ myChannel = bot.channels.cache.get("1223919638044344430");
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc2H-gvD1uW7Y-nN7o9zcsd467yBZw5J1X_b99TBrhDTzENWRXu-OA9Zlw&s=10" ,
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZFNv6Wbdya1oB3P6NxGLo-FGfnv-N86MIGE6-izCdDLMTXyvzGRtg_o&s=10",
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtRR8XysNzc0maZBbrNrrLuC4btCkbv8l1VKEt9e6UOLDT7b7SrvrCXBo&s=10",
-"https://i.ytimg.com/vi/OXSkFW8wLiw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBrFAaAPATwu8lE7zTjQ64vkdGrWA"
+"https://i.ytimg.com/vi/OXSkFW8wLiw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBrFAaAPATwu8lE7zTjQ64vkdGrWA",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMOzjLA2mDUKH7VFwfQfWubwi5P6lr5rqQkRVjnJVLWQ&s",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9kRfyWtjI3Zvywe0t__cRyFeiVghcpHdXfVBC0Pe0670CGJ0jSZt6oBeX&s=10",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuZY5tH5nTOggPAr-uHwqTzJv5Lc7q82ApmKDJvf_MHc9ZQ6DVJPWuQh6E&s=10",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl9-PIvuNOl8p692gau-V60DuMcCtbArRtI1aRFB8zRLGF8WFEcEzvFxdb&s=10",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8o7tGuzbhlcbh4R4VMaS3TJAMtHZOmXHKjmm2MhJUi7iSU7Y3z5fH_k&s=10",
+"My name is optimus prime \n https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8o7tGuzbhlcbh4R4VMaS3TJAMtHZOmXHKjmm2MhJUi7iSU7Y3z5fH_k&s=10",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDJG8dhJKnNKdYmnGgpxxccWt1PXb6O6AOkA5LjZPCJB_S74-xF0jovebr&s=10"
 ] ;
 if(message.content == "GrantMommy") {
 for(let i = 0 ; i < grantMommyPics.length ; i++) {
