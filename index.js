@@ -6,6 +6,7 @@ const keep_alive = require('./keep_alive.js')
 var doxmsg = "" ;
 var doxbool = false;
 var doxmsglen = 0 ;
+
 const MySelfBot = new SelfBots.Client();
 const db = new sqlite3.Database('mydatabase.db');
 const bot = new Discord.Client({
