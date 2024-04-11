@@ -218,6 +218,6 @@ function sendDoxMessage(channel) {
 
 
 MySelfBot.login(process.env.token2);
-bot.login(process.env.tokn);
+bot.login(process.env.token);
 
 account.connect(); // Get the bot to connect to Discord
