@@ -32,8 +32,10 @@ MySelfBot.once("ready", () => {
 	}
 });*/
 account.on("ready", () => {
+console.log("account connected");
   account.editStatus("online", {
-    name: "Your Mom hahah Sucker"
+    name: "Your Mom hahah Sucker",
+    type : 1
   })
 });
 
@@ -42,6 +44,13 @@ bot.on("error", (err) => {
 });
 bot.once("ready", () => {
   console.log("Ready");
+  client.user.setPresence({
+  status: 'online', // Status: 'online', 'idle', 'dnd', 'invisible'
+  activity: {
+  name: 'with Discord.js', // Activity text
+  type: 'PLAYING' // Activity type: 'PLAYING', 'WATCHING', 'LISTENING', 'STREAMING'
+        }
+    });
 });
 
 
