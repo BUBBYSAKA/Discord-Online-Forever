@@ -33,7 +33,13 @@ MySelfBot.once("ready", () => {
 });*/
 account.on("ready", () => {
   account.editStatus("online", {
-    name: "Rally Fury"
+    name: "Rally Fury",
+    startTimestamp: new Date(),
+    largeImageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJf7GWVFFamQ5lj21XZwabPU711_38neuJeg&usqp=CAU', // URL to the large game icon
+    smallImageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQE1CjO6oiy7tpJ43UtGinYBQ_QHimVvyOug&usqp=CAU', // URL to the small game icon
+ // You can also specify hover text for the icons
+   // largeImageText: 'Large Icon Text',
+ //   smallImageText: 'Small Icon Text'
   })
 });
 
