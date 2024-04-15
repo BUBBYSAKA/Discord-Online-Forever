@@ -34,7 +34,7 @@ MySelfBot.once("ready", () => {
 account.on("ready", () => {
   account.editStatus("online", {
     name: "Rally Fury"
-  }).catch(console.error);
+  })
 });
 
 bot.on("error", (err) => {
