@@ -44,7 +44,7 @@ bot.on("error", (err) => {
 });
 bot.once("ready", () => {
   console.log("Ready");
-  client.user.setPresence({
+  bot.user.setPresence({
   status: 'online', // Status: 'online', 'idle', 'dnd', 'invisible'
   activity: {
   name: 'with Discord.js', // Activity text
