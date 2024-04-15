@@ -170,7 +170,7 @@ if (message.content === "doriaSucks") {
   }
 if (message.content.startsWith(':') && message.content.endsWith(':')) {
     // Replace 'OTHER_SERVER_ID' with the ID of the server where the emoji is located
-    const otherServerId = '1069108304929886208';
+    const otherServerId = '878277273202085988';
 
     // Replace 'EMOJI_NAME' with the name of the emoji you want to use
     const emojiName = message.content.slice(1, -1);
