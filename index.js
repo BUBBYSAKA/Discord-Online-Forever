@@ -1,6 +1,6 @@
 const Eris = require("eris");
 const sqlite3 = require('sqlite3').verbose();
-const Discord = require("discord.js");
+const Discord   = require("discord.js");
 const SelfBots = require("discord.js-selfbot-v13");
 const keep_alive = require('./keep_alive.js')
 var doxmsg = "" ;
@@ -34,8 +34,7 @@ MySelfBot.once("ready", () => {
 account.on("ready", () => {
 console.log("account connected");
   account.editStatus("online", {
-    name: "Your Mom hahah Sucker",
-    type : 1
+    name: "BattleGrounds Mobile India",
   })
 });
 
@@ -44,10 +43,9 @@ bot.on("error", (err) => {
 });
 bot.once("ready", () => {
   console.log("Ready");
-  bot.user.setPresence({
-  status: 'online', // Status: 'online', 'idle', 'dnd', 'invisible'
-  activity: {
-  name: 'with Discord.js', // Activity text
+  bot.user.setActivity({
+  //status: 'online', // Status: 'online', 'idle', 'dnd', 'invisible'
+  name: 'discord.gg/thugshaker', // Activity text
   type: 'PLAYING' // Activity type: 'PLAYING', 'WATCHING', 'LISTENING', 'STREAMING'
         }
     });
