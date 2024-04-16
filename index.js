@@ -47,7 +47,7 @@ bot.once("ready", () => {
   //status: 'online', // Status: 'online', 'idle', 'dnd', 'invisible'
   name: 'discord.gg/thugshaker', // Activity text
   type: 'PLAYING' // Activity type: 'PLAYING', 'WATCHING', 'LISTENING', 'STREAMING'
-        }
+        
     });
 });
 
