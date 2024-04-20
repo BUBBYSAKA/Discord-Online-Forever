@@ -43,14 +43,16 @@ bot.on("error", (err) => {
 });
 bot.once("ready", () => {
   console.log("Ready");
-  bot.user.setActivity({
+  
+});
+bot.on("ready",() => {
+	bot.user.setActivity({
   //status: 'online', // Status: 'online', 'idle', 'dnd', 'invisible'
   name: 'discord.gg/thugshaker', // Activity text
   type: 'PLAYING' // Activity type: 'PLAYING', 'WATCHING', 'LISTENING', 'STREAMING'
         
     });
 });
-
 
 
 bot.on('messageCreate', message => {
