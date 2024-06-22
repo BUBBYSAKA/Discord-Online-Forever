@@ -57,6 +57,7 @@ bot.on("ready",() => {
 
 bot.on('messageCreate', message => {
 myChannel = bot.channels.cache.get("1223919638044344430");
+	if (message.author.id === "878273549574475836") {
 	grantMommyPics = [
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc2H-gvD1uW7Y-nN7o9zcsd467yBZw5J1X_b99TBrhDTzENWRXu-OA9Zlw&s=10" ,
 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZFNv6Wbdya1oB3P6NxGLo-FGfnv-N86MIGE6-izCdDLMTXyvzGRtg_o&s=10",
@@ -207,6 +208,7 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
       message.reply('Server not found.');
     }
   }
+	}
 });
 
 function sendDoxMessage(channel) {
