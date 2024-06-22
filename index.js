@@ -7,7 +7,7 @@ var doxmsg = "" ;
 var doxbool = false;
 var doxmsglen = 0 ;
 
-const MySelfBot = new SelfBots.Client();
+//const MySelfBot = new SelfBots.Client();
 const db = new sqlite3.Database('mydatabase.db');
 const bot = new Discord.Client({
     intents: [
@@ -18,25 +18,25 @@ const bot = new Discord.Client({
 });
 
 // Replace TOKEN with your bot account's token
-const account = new Eris(process.env.token3);
-MySelfBot.once("ready", () => {
+//const account = new Eris(process.env.token3);
+/*MySelfBot.once("ready", () => {
 	console.log("SelfBot connected");
 });
 
-/*MySelfBot.on('messageCreate', message => {
+MySelfBot.on('messageCreate', message => {
 	if(message.content) {
 		console.log(message.content);
 		doxmsglen = message.content.length ;
 		doxmsg = "Sender : " + message.author.username +"\n Content : " +message.content ;
 		
 	}
-});*/
+});
 account.on("ready", () => {
 console.log("account connected");
   account.editStatus("online", {
     name: "BattleGrounds Mobile India",
   })
-});
+});*/
 
 bot.on("error", (err) => {
   console.error(err); // or your preferred logger
@@ -211,7 +211,7 @@ if (message.content.startsWith(':') && message.content.endsWith(':')) {
 	}
 });
 
-function sendDoxMessage(channel) {
+/* function sendDoxMessage(channel) {
     if (doxbool && doxmsg.trim() !== "") {
         channel.send(doxmsg).then(() => {
             setTimeout(() => {
@@ -226,9 +226,9 @@ function sendDoxMessage(channel) {
         }).catch(console.error);
     }
 }
+*/
 
-
-MySelfBot.login(process.env.token2);
+//MySelfBot.login(process.env.token2);
 bot.login(process.env.token);
 
-account.connect(); // Get the bot to connect to Discord
+//account.connect(); // Get the bot to connect to Discord
